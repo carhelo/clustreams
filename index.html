@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos y Herramientas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bienvenido a Juegos y Herramientas</h1>
+    
+    <div class="grid">
+        <div class="square">Juego 1</div>
+        <div class="square">Juego 2</div>
+        <button class="square" onclick="window.location.href='lista.html'">Herramienta 1</button>
+        <div class="square">Herramienta 2</div>
+    </div>
+
+    <div class="song-list">
+        <h2>Agregar Canciones</h2>
+        <input type="text" id="songInput" placeholder="Agregar canción">
+        <button onclick="searchAndAddSong(document.getElementById('songInput').value)">Agregar</button>
+    </div>
+
+    <div class="controls">
+        <button id="prev" onclick="previousSong()">Anterior</button>
+        <button id="pause" onclick="pauseSong()">Pausar</button>
+        <button id="next" onclick="nextSong()">Siguiente</button>
+    </div>
+
+    <div id="player">
+        <button id="toggleButton" onclick="togglePlayer()">Ocultar/Revelar Reproductor</button>
+        <div style="display:flex; align-items:center;">
+            <button onclick="playSong()">►</button>
+            <button onclick="nextSong()">▶</button>
+            <button onclick="previousSong()">◀</button>
+            <button onclick="stopSong()">■</button>
+        </div>
+    </div>
+
+    <ul id="song-list"></ul> <!-- Contenedor para la lista de canciones -->
+
+    <script src="script.js"></script> <!-- Añade tu archivo JavaScript -->
+</body>
+</html>
